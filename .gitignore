@@ -1,5 +1,5 @@
 build/
-firmware/
+#firmware/
 espfs/mkespfsimage/*.o
 espfs/mkespfsimage/mkespfsimage
 webpages.espfs
