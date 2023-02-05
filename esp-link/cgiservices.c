@@ -125,6 +125,7 @@ int ICACHE_FLASH_ATTR cgiServicesInfo(HttpdConnData *connData) {
       "\"sntp_server\": \"%s\", "
       "\"mdns_enable\": \"%s\", "
       "\"mdns_servername\": \"%s\""
+	  "\"test_text\": \"%s\""
     " }",
 #ifdef SYSLOG
     flashConfig.syslog_host,
@@ -136,7 +137,8 @@ int ICACHE_FLASH_ATTR cgiServicesInfo(HttpdConnData *connData) {
     flashConfig.timezone_offset,
     flashConfig.sntp_server,
     flashConfig.mdns_enable ? "enabled" : "disabled",
-    flashConfig.mdns_servername
+    flashConfig.mdns_servername,
+	flashConfig.test_text
     );
 
   jsonHeader(connData, 200);

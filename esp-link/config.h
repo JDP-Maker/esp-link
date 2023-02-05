@@ -36,6 +36,7 @@ typedef struct {
            syslog_showdate;            // populate SYSLOG date field
   uint8_t  mdns_enable;
   char     mdns_servername[32];
+  char     test_text[32];				//JDP test to see if I can add option fields
   int8_t   timezone_offset;
   char     mqtt_host[64];              // MQTT host we connect to, was 32-char mqtt_old_host
   int8_t   data_bits;
