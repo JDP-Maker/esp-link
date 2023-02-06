@@ -10,8 +10,8 @@
 #define SDK_DBG
 
 #define CMD_DBG
-#undef ESPFS_DBG
-#undef CGI_DBG
+#define ESPFS_DBG
+#define CGI_DBG
 #define CGIFLASH_DBG
 #define CGIMQTT_DBG
 #define CGIPINS_DBG
@@ -32,7 +32,7 @@
 #define UART_DBG
 #define MDNS_DBG
 #define OPTIBOOT_DBG
-#undef SYSLOG_DBG
+#define SYSLOG_DBG
 #define CGISERVICES_DBG
 
 // If defined, the default hostname for DHCP will include the chip ID to make it unique

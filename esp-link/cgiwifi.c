@@ -143,7 +143,7 @@ void ICACHE_FLASH_ATTR wifiStartMDNS(struct ip_addr ip) {
 	mdns_info->txt_data[1] = mdns_txt1;
 	mdns_info->txt_data[2] = mdns_txt2;
 	mdns_info->txt_data[3] = mdns_txt3;
-//	mdns_info->txt_data[4] = flashConfig.test_text;
+	mdns_info->txt_data[4] = flashConfig.test_text;
     espconn_mdns_init(mdns_info);
   }
   else {
