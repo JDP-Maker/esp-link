@@ -10,7 +10,7 @@
 #define SDK_DBG
 
 #define CMD_DBG
-#define ESPFS_DBG
+#undef ESPFS_DBG
 #define CGI_DBG
 #define CGIFLASH_DBG
 #define CGIMQTT_DBG
