@@ -32,7 +32,7 @@
 #define UART_DBG
 #define MDNS_DBG
 #define OPTIBOOT_DBG
-#define SYSLOG_DBG
+#undef SYSLOG_DBG
 #define CGISERVICES_DBG
 
 // If defined, the default hostname for DHCP will include the chip ID to make it unique
