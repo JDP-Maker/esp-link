@@ -124,10 +124,10 @@ void ICACHE_FLASH_ATTR wifiAddStateChangeCb(WifiStateChangeCb cb) {
 
 static struct mdns_info *mdns_info;
 // See https://github.com/arduino/Arduino/blob/master/arduino-core/src/cc/arduino/packages/discoverers/NetworkDiscovery.java#L155-L168
-static char* mdns_txt0 = "ssh_upload=no";
-static char* mdns_txt1 = "tcp_check=no";
-static char* mdns_txt2 = "auth_upload=no";
-static char* mdns_txt3 = "board=mega";
+//static char* mdns_txt0 = "ssh_upload=no";
+//static char* mdns_txt1 = "tcp_check=no";
+//static char* mdns_txt2 = "auth_upload=no";
+//static char* mdns_txt3 = "board=mega";
 
 void ICACHE_FLASH_ATTR wifiStartMDNS(struct ip_addr ip) {
   if (flashConfig.mdns_enable) {
@@ -139,11 +139,11 @@ void ICACHE_FLASH_ATTR wifiStartMDNS(struct ip_addr ip) {
     mdns_info->server_name = flashConfig.mdns_servername;
     mdns_info->server_port = 23;
     mdns_info->ipAddr = ip.addr;
-    mdns_info->txt_data[0] = mdns_txt0;
-	mdns_info->txt_data[1] = mdns_txt1;
-	mdns_info->txt_data[2] = mdns_txt2;
-	mdns_info->txt_data[3] = mdns_txt3;
-	mdns_info->txt_data[4] = flashConfig.test_text;
+    mdns_info->txt_data[0] = flashConfig.mdns_service_1;
+	mdns_info->txt_data[1] = flashConfig.mdns_service_2;
+	mdns_info->txt_data[2] = flashConfig.mdns_service_3;
+	mdns_info->txt_data[3] = flashConfig.mdns_service_4;
+	mdns_info->txt_data[4] = flashConfig.mdns_service_5;
     espconn_mdns_init(mdns_info);
   }
   else {
