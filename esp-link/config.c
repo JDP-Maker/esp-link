@@ -31,7 +31,7 @@ FlashConfig flashDefault = {
   .sntp_server  = "us.pool.ntp.org\0",
   .syslog_host = "\0", .syslog_minheap = 8192, .syslog_filter = 7, .syslog_showtick = 1, .syslog_showdate = 0,
   .mdns_enable = 1, .mdns_servername = "http\0", .timezone_offset = 0,
-  .mdns_port = "80\0",						//added by   J_D_P
+  //.mdns_port = "80\0",						//added by   J_D_P
   .mdns_service_1 = "ssh_upload=no\0",		//added by   J_D_P
   .mdns_service_2 = "tcp_check=no\0",		//added by   J_D_P
   .mdns_service_3 = "auth_upload=no\0",		//added by   J_D_P
