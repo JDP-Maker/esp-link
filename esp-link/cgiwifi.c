@@ -137,13 +137,13 @@ void ICACHE_FLASH_ATTR wifiStartMDNS(struct ip_addr ip) {
 
     mdns_info->host_name = flashConfig.hostname;
     mdns_info->server_name = flashConfig.mdns_servername;
-    mdns_info->server_port = 23;			//added by   J_D_P
+    mdns_info->server_port = 23;
     mdns_info->ipAddr = ip.addr;
-    mdns_info->txt_data[0] = flashConfig.mdns_service_1;	//added by   J_D_P
-	mdns_info->txt_data[1] = flashConfig.mdns_service_2;	//added by   J_D_P
-	mdns_info->txt_data[2] = flashConfig.mdns_service_3;	//added by   J_D_P
-	mdns_info->txt_data[3] = flashConfig.mdns_service_4;	//added by   J_D_P
-	mdns_info->txt_data[4] = flashConfig.mdns_service_5;	//added by   J_D_P
+    mdns_info->txt_data[0] = flashConfig.mdns_service_1;		//J_D_P
+	mdns_info->txt_data[1] = flashConfig.mdns_service_2;
+	mdns_info->txt_data[2] = flashConfig.mdns_service_3;
+	mdns_info->txt_data[3] = flashConfig.mdns_service_4;
+	mdns_info->txt_data[4] = flashConfig.mdns_service_5;
     espconn_mdns_init(mdns_info);
   }
   else {
