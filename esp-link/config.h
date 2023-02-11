@@ -36,7 +36,7 @@ typedef struct {
            syslog_showdate;            // populate SYSLOG date field
   uint8_t  mdns_enable;
   char     mdns_servername[32];
-  //uint8_t  mdns_port;					//  J_D_P add MDNS Port options
+  uint8_t  mdns_port;					//  J_D_P add MDNS Port options
   char     mdns_service_1[32];				//  J_D_P add MDNS Sevice options
   char     mdns_service_2[32];				//  J_D_P add MDNS Sevice options
   char     mdns_service_3[32];				//  J_D_P add MDNS Sevice options

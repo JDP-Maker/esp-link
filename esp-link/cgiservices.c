@@ -125,7 +125,7 @@ int ICACHE_FLASH_ATTR cgiServicesInfo(HttpdConnData *connData) {
       "\"sntp_server\": \"%s\", "
       "\"mdns_enable\": \"%s\", "
       "\"mdns_servername\": \"%s\", "
-	  //"\"mdns_port\": \"%s\", "			//added by   J_D_P
+	  "\"mdns_port\": \"%s\", "			//added by   J_D_P
 	  "\"mdns_service_1\": \"%s\", "	//added by   J_D_P
 	  "\"mdns_service_2\": \"%s\", "	//added by   J_D_P
 	  "\"mdns_service_3\": \"%s\", "	//added by   J_D_P
@@ -143,7 +143,7 @@ int ICACHE_FLASH_ATTR cgiServicesInfo(HttpdConnData *connData) {
     flashConfig.sntp_server,
     flashConfig.mdns_enable ? "enabled" : "disabled",
     flashConfig.mdns_servername,
-	//flashConfig.mdns_port,			//added by   J_D_P
+	flashConfig.mdns_port,			//added by   J_D_P
 	flashConfig.mdns_service_1,		//added by   J_D_P
 	flashConfig.mdns_service_2,		//added by   J_D_P
 	flashConfig.mdns_service_3,		//added by   J_D_P
@@ -211,7 +211,7 @@ int ICACHE_FLASH_ATTR cgiServicesSet(HttpdConnData *connData) {
   }
   else {
     mdns |= getStringArg(connData, "mdns_servername", flashConfig.mdns_servername, sizeof(flashConfig.mdns_servername));
-	//mdns |= getStringArg(connData, "mdns_port", flashConfig.mdns_port, sizeof(flashConfig.mdns_port));						//added by   J_D_P
+	mdns |= getStringArg(connData, "mdns_port", flashConfig.mdns_port, sizeof(flashConfig.mdns_port));						//added by   J_D_P
 	mdns |= getStringArg(connData, "mdns_service_1", flashConfig.mdns_service_1, sizeof(flashConfig.mdns_service_1));		//added by   J_D_P
 	mdns |= getStringArg(connData, "mdns_service_2", flashConfig.mdns_service_2, sizeof(flashConfig.mdns_service_2));		//added by   J_D_P
 	mdns |= getStringArg(connData, "mdns_service_3", flashConfig.mdns_service_3, sizeof(flashConfig.mdns_service_3));		//added by   J_D_P
