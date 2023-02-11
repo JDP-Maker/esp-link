@@ -129,6 +129,7 @@ static void ICACHE_FLASH_ATTR prHeapTimerCb(void *arg) {
 
 # define VERS_STR_STR(V) #V
 # define VERS_STR(V) VERS_STR_STR(V)
+
 char* esp_link_version = VERS_STR(VERSION);
 
 // address of espfs binary blob

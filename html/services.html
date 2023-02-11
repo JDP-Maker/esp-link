@@ -71,6 +71,12 @@
                 <input type="text" name="mdns_servername"/>
                 <div class="popup">The default service is http. For the arduino IDE use arduino</div>
               </div>
+			  <!-- Added by   J_D_P for more flexablity (from here down to the comment "end Add by   J_D_P")  -->
+			  <div class="pure-form-stacked">
+                <label>Port Number</label>
+                <input type="text" name="mdns_port"/>
+                <div class="popup">The default Port is 80. Use 23 for Megaflash or IDE </div>
+              </div>
               <div class="pure-form-stacked">
                 <label>MDNS service 1</label>
                 <input type="text" name="mdns_service_1"/>
@@ -96,6 +102,7 @@
                 <input type="text" name="mdns_service_5"/>
                 <div class="popup">Don't change unless you know what you are doing</div>
               </div>
+			  <!-- end Add by  J_D_P  -->
               <button id="mDNS-button" type="submit" class="pure-button button-primary">
                 Update mDNS settings!
               </button>
