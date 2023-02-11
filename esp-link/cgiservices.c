@@ -142,7 +142,7 @@ int ICACHE_FLASH_ATTR cgiServicesInfo(HttpdConnData *connData) {
     flashConfig.sntp_server,
     flashConfig.mdns_enable ? "enabled" : "disabled",
     flashConfig.mdns_servername,
-	flashConfig.mdns_service_1,
+	flashConfig.mdns_service_1,			//J_D_P
 	flashConfig.mdns_service_2,
 	flashConfig.mdns_service_3,
 	flashConfig.mdns_service_4,
