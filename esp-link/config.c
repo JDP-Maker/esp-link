@@ -31,11 +31,11 @@ FlashConfig flashDefault = {
   .sntp_server  = "us.pool.ntp.org\0",
   .syslog_host = "\0", .syslog_minheap = 8192, .syslog_filter = 7, .syslog_showtick = 1, .syslog_showdate = 0,
   .mdns_enable = 1, .mdns_servername = "http\0", .timezone_offset = 0,
-  .mdns_service_1 = "ssh_upload=no\0",
-  .mdns_service_2 = "tcp_check=no\0",
-  .mdns_service_3 = "auth_upload=no\0",
-  .mdns_service_4 = "board=mega\0",
-  .mdns_service_5 = "future_use=yes\0",
+  .mdns_service_1 = "ssh_upload=no\0",		//J_D_P added changeable MDNS service fields
+  .mdns_service_2 = "tcp_check=no\0",		//J_D_P added changeable MDNS service fields
+  .mdns_service_3 = "auth_upload=no\0",		//J_D_P added changeable MDNS service fields
+  .mdns_service_4 = "board=mega\0",			//J_D_P added changeable MDNS service fields
+  .mdns_service_5 = "future_use=yes\0",		//J_D_P added changeable MDNS service fields
   .data_bits	= EIGHT_BITS,
   .parity	= NONE_BITS,
   .stop_bits	= ONE_STOP_BIT,
