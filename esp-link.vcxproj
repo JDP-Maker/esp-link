@@ -127,7 +127,7 @@
     <Text Include="LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="html\favicon.ico" />
+    <Image Include="html\web_logo.ico" />
     <Image Include="html\wifi\icons.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

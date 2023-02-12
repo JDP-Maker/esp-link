@@ -195,6 +195,7 @@ int ICACHE_FLASH_ATTR cgiServicesSet(HttpdConnData *connData) {
   if (mdns > 0) {
     if (flashConfig.mdns_enable){
       DBG("Services: MDNS Enabled\n");
+	  DBG("Services: test2\n");
       struct ip_info ipconfig;
       wifi_get_ip_info(STATION_IF, &ipconfig);
 
@@ -210,6 +211,7 @@ int ICACHE_FLASH_ATTR cgiServicesSet(HttpdConnData *connData) {
     }
   }
   else {
+	DBG("Services: test3\n");
     mdns |= getStringArg(connData, "mdns_servername", flashConfig.mdns_servername, sizeof(flashConfig.mdns_servername));	//J_D_P added changeable MDNS service fields
 	mdns |= getStringArg(connData, "mdns_service_1", flashConfig.mdns_service_1, sizeof(flashConfig.mdns_service_1));		//J_D_P added changeable MDNS service fields
 	mdns |= getStringArg(connData, "mdns_service_2", flashConfig.mdns_service_2, sizeof(flashConfig.mdns_service_2));		//J_D_P added changeable MDNS service fields
@@ -221,6 +223,7 @@ int ICACHE_FLASH_ATTR cgiServicesSet(HttpdConnData *connData) {
 
     if (mdns > 0 && mdns_started) {
       DBG("Services: MDNS Servername Updated\n");
+	  DBG("Services: test1\n");
       espconn_mdns_server_unregister();
       espconn_mdns_close();
       struct ip_info ipconfig;
