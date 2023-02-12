@@ -36,6 +36,7 @@ FlashConfig flashDefault = {
   .mdns_service_3 = "auth_upload=no\0",		//J_D_P added changeable MDNS service fields
   .mdns_service_4 = "board=mega\0",			//J_D_P added changeable MDNS service fields
   .mdns_service_5 = "future_use=yes\0",		//J_D_P added changeable MDNS service fields
+  .mdns_ota_port = 23,						//J_D_P added changeable MDNS OTA port
   .data_bits	= EIGHT_BITS,
   .parity	= NONE_BITS,
   .stop_bits	= ONE_STOP_BIT,

@@ -36,11 +36,12 @@ typedef struct {
            syslog_showdate;            // populate SYSLOG date field
   uint8_t  mdns_enable;
   char     mdns_servername[32];
-  char     mdns_service_1[32];				//JDP add MDNS Sevice options
-  char     mdns_service_2[32];				//JDP add MDNS Sevice options
-  char     mdns_service_3[32];				//JDP add MDNS Sevice options
-  char     mdns_service_4[32];				//JDP add MDNS Sevice options
-  char     mdns_service_5[32];				//JDP add MDNS Sevice options
+  char     mdns_service_1[32];				//J_D_P add MDNS Sevice options
+  char     mdns_service_2[32];				//J_D_P add MDNS Sevice options
+  char     mdns_service_3[32];				//J_D_P add MDNS Sevice options
+  char     mdns_service_4[32];				//J_D_P add MDNS Sevice options
+  char     mdns_service_5[32];				//J_D_P add MDNS Sevice options
+  uint16_t  mdns_ota_port;					//J_D_P added changeable MDNS OTA port
   int8_t   timezone_offset;
   char     mqtt_host[64];              // MQTT host we connect to, was 32-char mqtt_old_host
   int8_t   data_bits;

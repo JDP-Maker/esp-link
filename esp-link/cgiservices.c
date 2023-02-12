@@ -125,11 +125,12 @@ int ICACHE_FLASH_ATTR cgiServicesInfo(HttpdConnData *connData) {
       "\"sntp_server\": \"%s\", "
       "\"mdns_enable\": \"%s\", "
       "\"mdns_servername\": \"%s\", "
+	  "\"mdns_ota_port\": %d, "		//J_D_P added changeable MDNS OTA port
 	  "\"mdns_service_1\": \"%s\", "	//J_D_P added changeable MDNS service fields 
 	  "\"mdns_service_2\": \"%s\", "	//J_D_P added changeable MDNS service fields
 	  "\"mdns_service_3\": \"%s\", "	//J_D_P added changeable MDNS service fields
 	  "\"mdns_service_4\": \"%s\", "	//J_D_P added changeable MDNS service fields
-	  "\"mdns_service_5\": \"%s\" "		//J_D_P added changeable MDNS service fields
+	  "\"mdns_service_5\": \"%s\" "	//J_D_P added changeable MDNS service fields
     " }",
 #ifdef SYSLOG
     flashConfig.syslog_host,
@@ -142,6 +143,7 @@ int ICACHE_FLASH_ATTR cgiServicesInfo(HttpdConnData *connData) {
     flashConfig.sntp_server,
     flashConfig.mdns_enable ? "enabled" : "disabled",
     flashConfig.mdns_servername,
+	flashConfig.mdns_ota_port,		//J_D_P added changeable MDNS OTA port
 	flashConfig.mdns_service_1,		//J_D_P added changeable MDNS service fields
 	flashConfig.mdns_service_2,		//J_D_P added changeable MDNS service fields
 	flashConfig.mdns_service_3,		//J_D_P added changeable MDNS service fields
@@ -214,7 +216,7 @@ int ICACHE_FLASH_ATTR cgiServicesSet(HttpdConnData *connData) {
 	mdns |= getStringArg(connData, "mdns_service_3", flashConfig.mdns_service_3, sizeof(flashConfig.mdns_service_3));		//J_D_P added changeable MDNS service fields
 	mdns |= getStringArg(connData, "mdns_service_4", flashConfig.mdns_service_4, sizeof(flashConfig.mdns_service_4));		//J_D_P added changeable MDNS service fields
 	mdns |= getStringArg(connData, "mdns_service_5", flashConfig.mdns_service_5, sizeof(flashConfig.mdns_service_5));		//J_D_P added changeable MDNS service fields
-	
+	mdns |= getUInt16Arg(connData, "mdns_ota_port", &flashConfig.mdns_ota_port);												//J_D_P added changeable MDNS OTA port
     if (mdns < 0) return HTTPD_CGI_DONE;
 
     if (mdns > 0 && mdns_started) {

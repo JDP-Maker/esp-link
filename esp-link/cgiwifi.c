@@ -133,14 +133,14 @@ void ICACHE_FLASH_ATTR wifiStartMDNS(struct ip_addr ip) {
 
     mdns_info->host_name = flashConfig.hostname;
     mdns_info->server_name = flashConfig.mdns_servername;
-    mdns_info->server_port = 23;
+    mdns_info->server_port = flashConfig.mdns_ota_port;		//J_D_P added changeable MDNS OTA port
     mdns_info->ipAddr = ip.addr;
     mdns_info->txt_data[0] = flashConfig.mdns_service_1;	//J_D_P added changeable MDNS service fields
 	mdns_info->txt_data[1] = flashConfig.mdns_service_2;	//J_D_P added changeable MDNS service fields
 	mdns_info->txt_data[2] = flashConfig.mdns_service_3;	//J_D_P added changeable MDNS service fields
 	mdns_info->txt_data[3] = flashConfig.mdns_service_4;	//J_D_P added changeable MDNS service fields
 	mdns_info->txt_data[4] = flashConfig.mdns_service_5;	//J_D_P added changeable MDNS service fields
-    espconn_mdns_init(mdns_info);
+	espconn_mdns_init(mdns_info);
   }
   else {
     espconn_mdns_server_unregister();
