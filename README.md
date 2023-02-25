@@ -1,5 +1,7 @@
-ESP-LINK: Wifi-Serial Bridge w/REST&MQTT
+﻿ESP-LINK: Wifi-Serial Bridge w/REST&MQTT
 ========================================
+**JDP added;
+This version adds MDNS text options to the services web page. These are attributes the Arduino IDE can pick up and pass to the upload tools in the platform.txt file.**
 
 <img src="https://cloud.githubusercontent.com/assets/39480/19333951/73fcdcbe-90ad-11e6-8572-5e654377275a.png">
 
@@ -126,6 +128,9 @@ attached microcontroller, and the pin assignments card:
 <img width="30%" src="https://cloud.githubusercontent.com/assets/39480/8261658/11e6c64a-1681-11e5-82d0-ea5ec90a6ddb.png">
 <img width="45%" src="https://cloud.githubusercontent.com/assets/39480/19334011/e0c3fe40-90ad-11e6-9893-847e805e7b89.png">
 <img width="45%" src="https://cloud.githubusercontent.com/assets/39480/19333988/c1858cec-90ad-11e6-8b1c-ffed516e1b7f.png">
+<img width="45%" 
+src="https://github.com/JDP-Maker/esp-link/blob/master/esp-link-mdns-screen.PNG?raw=true">
+
 
 Getting Started
 ---------------
