@@ -1,7 +1,7 @@
 ﻿ESP-LINK: Wifi-Serial Bridge w/REST&MQTT
 ========================================
 **JDP added;
-This version adds MDNS text options to the services web page. These are attributes the Arduino IDE can pick up and pass to the upload tools in the platform.txt file.**
+This version adds MDNS text options to the services web page. These are attributes the Arduino IDE can pick up and pass to the upload tools in the platform.txt file.  See the last image in eye candy further down this file**
 
 <img src="https://cloud.githubusercontent.com/assets/39480/19333951/73fcdcbe-90ad-11e6-8572-5e654377275a.png">
 
